@@ -1,6 +1,6 @@
 # Suprematism Buttons
 
-An Angular 2 buttons component.
+Some Angular 2 button components.
 
 
 #### Installation
@@ -20,24 +20,30 @@ we must manually run the publish prehook and save the files.
 
 
 ## Components
-- [`supre-buttons`](#supre-buttons)
+- [`supre-button`](#supre-button)
 
-#### <a id="supre-buttons"></a> `supre-buttons`
-A component for a buttons.
+#### <a id="supre-button"></a> `supre-button`
+A component for a standard button.
 
 ##### Directives
-- Any Directives?
+- `text: string` - The button's text
+- `icon?: string` - An icon font's css class(es)
+- `color: Color` - The color of the button. While this could be dynamically inlined, I've opted to have the color types predefined in the css. A valid color is 'blue' | 'green'.
 
 ##### Events
-- Any Events
-
+- No custom events, just use click, mousedown, etc
 
 ## States
-- The buttons component has these states:
+- [default]
+- hover
+- active
 
 
 ## Example
 ```html
-<supre-buttons>
-</supre-buttons>
+<supre-button
+  icon="ion-plus"
+  text="Create"
+  [color]="green"
+></supre-button>
 ```

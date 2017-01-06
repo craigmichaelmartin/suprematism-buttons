@@ -1,0 +1,55 @@
+@import "../node_modules/suprematism-scss/colors";
+
+$green: #91cf43;
+$green-light: lighten($green, 3%);
+$green-lighter: lighten($green, 6%);
+$blue: $blue;
+$blue-light: lighten($blue, 3%);
+$blue-lighter: lighten($blue, 6%);
+
+@mixin button-colorways($color, $color-light, $color-lighter) {
+  background-color: $color;
+  border: 3px solid $color;
+  color: white;
+  &:hover {
+    background-color: $color-lighter;
+    border: 3px solid $color-lighter;
+  }
+  &:focus {
+    background-color: $color-light;
+    border: 3px solid $color;
+    outline:0;
+  }
+}
+
+.Button {
+  height: 36px;
+  font-size: 11px;
+  font-family: verdana;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+}
+.Button--green {
+  @include button-colorways($green, $green-light, $green-lighter);
+}
+.Button--blue {
+  @include button-colorways($blue, $blue-light, $blue-lighter);
+}
+.Button-icon {
+  padding-right: 8px;
+  vertical-align: text-bottom;
+  font-size: 1.6em;
+}
+.Button-icon + .Button-text {
+  vertical-align: super;
+}
+.Button-text {
+  font-weight: 600;
+}
+.Button--green.Button-icon,
+.Button--blue.Button-icon {
+  color: white;
+}
