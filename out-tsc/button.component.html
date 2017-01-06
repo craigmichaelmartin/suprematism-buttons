@@ -1,0 +1,4 @@
+<button class="Button" [ngClass]="'Button--' + color">
+  <span class="Button-icon" *ngIf="icon" [ngClass]="icon"></span>
+  <span class="Button-text" *ngIf="text">{{text}}</span>
+</button>
