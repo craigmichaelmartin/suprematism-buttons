@@ -29,7 +29,7 @@ var ButtonComponent = (function () {
         core_1.Component({
             selector: 'supre-button',
             template: require('./button.component.html'),
-            styles: [require('./button.component.scss')]
+            styles: [require('./button.component.css')]
         }), 
         __metadata('design:paramtypes', [])
     ], ButtonComponent);
