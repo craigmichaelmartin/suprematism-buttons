@@ -12,7 +12,13 @@ var core_1 = require('@angular/core');
 var ButtonComponent = (function () {
     function ButtonComponent() {
         this.color = 'green';
+        this.defaultHeight = '36px';
     }
+    ButtonComponent.prototype.swallowIfDisabled = function (event) {
+        if (this.disabled) {
+            event.stopPropagation();
+        }
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
@@ -25,6 +31,18 @@ var ButtonComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], ButtonComponent.prototype, "icon", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ButtonComponent.prototype, "disabled", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ButtonComponent.prototype, "corners", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ButtonComponent.prototype, "height", void 0);
     ButtonComponent = __decorate([
         core_1.Component({
             selector: 'supre-button',

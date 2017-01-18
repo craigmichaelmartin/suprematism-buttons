@@ -1,4 +1,8 @@
-<button class="Button" [ngClass]="'Button--' + color">
-  <span class="Button-icon" *ngIf="icon" [ngClass]="icon"></span>
-  <span class="Button-text" *ngIf="text">{{text}}</span>
+<button class="Button"
+  [ngStyle]="{height: (height || color === 'condition') ? (height || 32) + 'px' : defaultHeight}"
+  [ngClass]="[ !!color ? 'Button--' + color : '', !!disabled ? 'is-disabled' : '', !!corners ? 'is-cornered' : '']"
+  [attr.disabled]="disabled ? 'disabled' : null"
+>
+  <span (click)="swallowIfDisabled($event)" class="Button-icon" *ngIf="icon" [ngClass]="icon"></span>
+  <span (click)="swallowIfDisabled($event)" class="Button-text" *ngIf="text">{{text}}</span>
 </button>
