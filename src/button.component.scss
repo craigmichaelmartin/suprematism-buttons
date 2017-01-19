@@ -81,6 +81,9 @@ $teal-lighter: #0082a9;
   color: #cccccc;
   box-shadow: none;
 }
+.Button.Button--condition.is-disabled {
+  border: 0;
+}
 .Button.is-cornered {
   border-radius: 0;
 }
