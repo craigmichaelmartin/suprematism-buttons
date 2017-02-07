@@ -1,6 +1,8 @@
-# Suprematism Buttons
+# Suprematism Buttons -- DEPRECATED
 
 Some Angular 2 button components.
+
+** See the [suprematism style guide](https://cinbcuniversal.github.io/suprematism-style-guide) for css instead **
 
 
 #### Installation
